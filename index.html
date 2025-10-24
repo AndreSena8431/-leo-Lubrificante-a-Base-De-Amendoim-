@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Óleo de amendoim • Alternativa biodegradável</title>
+  <meta name="description" content="Óleo biodegradável à base de amendoim — alternativa sustentável aos óleos fósseis. Comparativo e informações técnicas." />
+  <style>
+    :root{
+      --bg:#f6fbf6;
+      --card:#ffffff;
+      --accent:#2b8a4b;
+      --accent-2:#66c17a;
+      --muted:#5a6b5a;
+      --radius:14px;
+      --maxw:1100px;
+      --shadow: 0 10px 30px rgba(10,30,20,0.06);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#f0faf0 0%, #ffffff 100%);
+      color:#13321b;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:22px;}
+    header{
+      position:sticky;top:14px;z-index:50;
+      background:linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.6));
+      backdrop-filter: blur(6px);
+      border-radius:22px;
+      padding:10px 14px;
+      box-shadow: 0 6px 20px rgba(10,20,10,0.04);
+      margin:10px auto;
+      max-width:calc(var(--maxw) + 48px);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 8px 20px rgba(43,138,75,0.18)}
+    .brand h1{font-size:16px;margin:0}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:700}
+    nav a:hover{color:var(--accent);background:rgba(102,193,122,0.12)}
+    .menu-btn{display:none;background:transparent;border:0;padding:8px;border-radius:8px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px}
+    .card{background:var(--card);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+    .hero h2{margin:0 0 8px 0;font-size:28px}
+    .lead{color:var(--muted);margin-bottom:16px}
+    .feature-list{display:flex;gap:10px;flex-wrap:wrap}
+    .feature{background:linear-gradient(180deg,#f7fff7,#f0fff0);padding:10px 12px;border-radius:10px;font-weight:700;font-size:14px;color:#1b5b2e}
+    .product-visual{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;padding:18px}
+    .bottle{width:170px;height:260px;border-radius:18px;position:relative;overflow:hidden;background:linear-gradient(180deg,#fff,#f2fff5);display:grid;place-items:center;box-shadow:0 14px 40px rgba(20,40,20,0.08)}
+    .badge{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:white;padding:8px 10px;border-radius:999px;font-weight:800;font-size:13px}
+    section{margin-top:28px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .text-muted{color:var(--muted)}
+    .specs table{width:100%;border-collapse:collapse}
+    .specs th, .specs td{padding:10px 8px;text-align:left;border-bottom:1px solid #f0f0f0}
+    .specs th{color:var(--accent)}
+    .sustain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .sustain-card{padding:16px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fbfff9);box-shadow:0 6px 20px rgba(10,20,10,0.04)}
+    .sustain-card h4{margin:6px 0 6px 0}
+    .sustain-card p{margin:0;color:var(--muted);font-size:14px}
+    footer{margin:40px 0;padding:18px;border-radius:12px;background:linear-gradient(180deg,#f8fff8,#ffffff);text-align:center;color:var(--muted);font-size:14px}
+    .chart-wrap{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
+    .chart{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fdfefb,#f7fff7);box-shadow:0 6px 20px rgba(10,20,10,0.02)}
+    .legend{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .legend .item{display:flex;gap:8px;align-items:center;font-weight:700;color:var(--muted)}
+    .legend .swatch{width:16px;height:12px;border-radius:6px}
+    /* horizontal bars */
+    .bars{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+    .bar-row{display:flex;gap:12px;align-items:center}
+    .bar-label{width:160px;font-weight:700;color:#234e2a}
+    .bar-track{flex:1;background:#e9f7ed;border-radius:999px;padding:6px;position:relative;overflow:hidden;height:22px}
+    .bar-fill{height:100%;border-radius:999px;width:0%;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;color:#072a10;font-weight:800;transition:width 1.2s cubic-bezier(.2,.9,.2,1)}
+    .fill-common{background:linear-gradient(90deg,#f07b4a,#ffb36b)} /* oil comum - laranja */
+    .fill-bio{background:linear-gradient(90deg,var(--accent-2),var(--accent))} /* bio - verde */
+    .score{width:46px;text-align:right;font-weight:800;color:var(--muted)}
+    .note{font-size:13px;color:var(--muted);margin-top:8px}
+    .meta{font-size:14px;color:var(--muted);margin-top:6px}
+    .detail{background:linear-gradient(180deg,#ffffff,#fbfff9);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(10,20,10,0.04)}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.chart-wrap{grid-template-columns:1fr}.sustain-grid{grid-template-columns:repeat(2,1fr)}nav ul{display:none}.menu-btn{display:inline-flex}}
+    @media (max-width:600px){.sustain-grid{grid-template-columns:1fr}.badge{font-size:12px;padding:8px}.bar-label{width:120px}}
+    .fade-up{opacity:0;transform:translateY(12px);transition:all .6s ease}
+    .fade-up.show{opacity:1;transform:none}
+
+    /* small utils */
+    .center{display:flex;justify-content:center;align-items:center}
+    ul.pl{padding-left:18px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav wrap">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">OA</div>
+        <div>
+          <h1>Óleo de amendoim</h1>
+          <div class="text-muted" style="font-size:13px">Óleo biodegradável • Alternativa sustentável aos lubrificantes fósseis</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#inicio" class="smooth">Início</a></li>
+          <li><a href="#sobre" class="smooth">Sobre</a></li>
+          <li><a href="#produto" class="smooth">Produto</a></li>
+          <li><a href="#metodologia" class="smooth">Metodologia</a></li>
+          <li><a href="#vantagens" class="smooth">Vantagens</a></li>
+          <li><a href="#resumo" class="smooth">Resumo</a></li>
+          <li><a href="#conclusao" class="smooth">Conclusão</a></li>
+          <li><a href="#sustentabilidade" class="smooth">Sustentabilidade</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+
+    <div class="wrap mobile-nav" id="mobileNav" style="display:none">
+      <a href="#inicio" class="smooth">Início</a> ·
+      <a href="#sobre" class="smooth">Sobre</a> ·
+      <a href="#produto" class="smooth">Produto</a> ·
+      <a href="#metodologia" class="smooth">Metodologia</a> ·
+      <a href="#vantagens" class="smooth">Vantagens</a> ·
+      <a href="#resumo" class="smooth">Resumo</a> ·
+      <a href="#conclusao" class="smooth">Conclusão</a> ·
+      <a href="#sustentabilidade" class="smooth">Sustentabilidade</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section id="inicio" class="hero fade-up">
+      <div class="card">
+        <span class="badge">100% Biodegradável</span>
+        <h2>Óleo Lubrificante Biodegradável a Base de Amendoim — alternativa vegetal para lubrificação industrial</h2>
+        <p class="lead">Óleo lubrificante à base de amendoim que alia desempenho operacional e responsabilidade ambiental. Ideal para indústrias que buscam reduzir riscos de contaminação sem sacrificar eficiência.</p>
+
+        <div class="feature-list" aria-hidden="true" style="margin-top:12px">
+          <div class="feature">Alta biodegradabilidade</div>
+          <div class="feature">Compatível com aditivos</div>
+          <div class="feature">Produção local e sustentável</div>
+        </div>
+
+        <div style="margin-top:16px;color:var(--muted)" class="meta">
+          Aplicações: lubrificação industrial, fluidos hidráulicos de baixo risco, óleos de corte com menor impacto, conservação de peças e formulações específicas.
+        </div>
+      </div>
+
+      <aside class="card product-visual fade-up" aria-hidden="true">
+        <div class="bottle" role="img" aria-label="Frasco de óleo biodegradável">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ffd96b"/><stop offset="1" stop-color="#ffc56b"/></linearGradient></defs>
+            <g transform="translate(6,4) scale(0.9)">
+              <path d="M24 2c6 0 12 6 14 12s2 14-2 20-12 10-18 8-12-8-14-14S18 2 24 2z" fill="url(#g1)" stroke="#c48a28" stroke-width="1"/>
+              <path d="M22 14c3-1 6 1 6 4 0 3-2 6-5 6s-6-3-6-6 2-5 5-4z" fill="#7c4f10" opacity="0.08"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <div style="font-weight:800;font-size:18px">Óleo de amendoim</div>
+          <div class="text-muted" style="font-size:14px;margin-top:6px">Viscosidade controlada · Estável · Biodegradável</div>
+        </div>
+        <div style="margin-top:10px;font-size:13px;color:var(--muted)">Embalagens: 1L • 5L • 20L • Tambores</div>
+      </aside>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="fade-up">
+      <div class="card">
+        <h3>Sobre o projeto</h3>
+        <div class="grid-2" style="align-items:center">
+          <div>
+            <p class="text-muted">Projeto com foco em reduzir a dependência de lubrificantes fósseis em aplicações onde o risco ambiental é relevante. O óleo de amendoim foi escolhido por sua disponibilidade, perfil lipídico favorável e facilidade de refino com métodos de baixo impacto.</p>
+
+            <p class="text-muted">A cadeia produtiva prioriza cooperativas locais, melhores práticas agrícolas e processos industriais eficientes — visando reduzir emissões e gerar valor local.</p>
+
+            <ul class="pl" style="margin-top:10px;color:var(--muted)">
+              <li>Testes físico-químicos em laboratório para garantir qualidade.</li>
+              <li>Documentação técnica (FISPQ, SDS) disponível para clientes.</li>
+              <li>Programas piloto com indústrias locais para validação em campo.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="detail">
+              <strong>Parceiros & suporte técnico</strong>
+              <p class="text-muted" style="margin-top:8px">Universidades, laboratórios e cooperativas agrícolas atuam em conjunto no desenvolvimento e testes de aplicação.</p>
+
+              <strong style="display:block;margin-top:10px">Objetivo</strong>
+              <p class="text-muted" style="margin-top:8px">Criar uma alternativa comercialmente viável que reduz impactos e mantém performance aceitável em operações industriais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTO -->
+    <section id="produto" class="fade-up">
+      <div class="card specs">
+        <h3>Produto — Especificações & Benefícios</h3>
+        <p class="text-muted">Valores típicos e observações técnicas obtidas em ensaios de bancada.</p>
+
+        <table>
+          <thead>
+            <tr><th>Característica</th><th>Valor típico / Observação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Viscosidade (40°C)</td><td>40–70 cSt — ajustável com aditivos biodegradáveis</td></tr>
+            <tr><td>Ponto de fumaça</td><td>220–250 °C (adequado para muitas aplicações)</td></tr>
+            <tr><td>Índice de acidez</td><td>&lt; 0.2 % — controlado por refino</td></tr>
+            <tr><td>Biodegradabilidade</td><td>&gt; 80% em 28 dias (ensaios padrão)</td></tr>
+            <tr><td>Toxicidade</td><td>Baixa — menor risco em derramamentos</td></tr>
+            <tr><td>Compatibilidade</td><td>Misturável com ésteres sintéticos e aditivos biodegradáveis</td></tr>
+          </tbody>
+        </table>
+
+        <div style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+          <div class="card" style="padding:12px;flex:1;min-width:210px">
+            <strong>Indicações de uso</strong>
+            <p class="text-muted" style="margin-top:8px">Setores com sensibilidade ambiental, manutenção em áreas próximas a corpos hídricos, equipamentos de laboratório e aplicações industriais de média temperatura.</p>
+          </div>
+
+          <div class="card" style="padding:12px;min-width:210px">
+            <strong>Segurança</strong>
+            <p class="text-muted" style="margin-top:8px">Baixa toxicidade; manuseio com EPI padrão. Fornecemos FISPQ para clientes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGIA -->
+    <section id="metodologia" class="fade-up">
+      <div class="card">
+        <h3>Metodologia</h3>
+        <p class="text-muted">O processo aplicado combina técnicas de extração mecânica e refino suave para preservar propriedades naturais do óleo, reduzindo consumo energético e evitando solventes agressivos.</p>
+
+        <ol class="pl" style="margin-top:10px;color:var(--muted)">
+          <li><strong>Extração:</strong> prensagem a frio ou pressão controlada para minimizar oxidação.</li>
+          <li><strong>Filtragem:</strong> remoção de sólidos e impurezas com filtros multistágio.</li>
+          <li><strong>Refino leve:</strong> desodorização e neutralização para reduzir acidez sem destruir glicerídeos úteis.</li>
+          <li><strong>Formulação:</strong> adição de aditivos biodegradáveis para estabilidade térmica e antioxidantes naturais.</li>
+          <li><strong>Testes:</strong> ensaios de viscosidade, ponto de fumaça, degradação e toxicidade.</li>
+        </ol>
+
+        <p class="text-muted" style="margin-top:10px">Os parâmetros são ajustados conforme aplicação — equipamentos críticos passam por validação em bancada e campo antes de adoção comercial.</p>
+      </div>
+    </section>
+
+    <!-- VANTAGENS -->
+    <section id="vantagens" class="fade-up">
+      <div class="card">
+        <h3>Vantagens</h3>
+        <div class="grid-2" style="align-items:flex-start">
+          <div>
+            <ul class="pl" style="color:var(--muted)">
+              <li><strong>Ambiental:</strong> menos persistência e menor risco de contaminação em derramamentos.</li>
+              <li><strong>Socioeconômico:</strong> gera demanda para produtores locais e fortalece cadeias curtas.</li>
+              <li><strong>Operacional:</strong> boa lubrificação em muitos casos, redução de necessidade de descontaminação.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="detail">
+              <strong>Comparação rápida</strong>
+              <p class="text-muted" style="margin-top:8px">Em aplicações sensíveis, o custo total (produção + limpeza + risco) frequentemente favorece o uso do óleo vegetal, mesmo que o preço inicial do fóssil seja menor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section id="resumo" class="fade-up">
+      <div class="card">
+        <h3>Resumo executivo</h3>
+        <p class="text-muted">Óleo de amendoim é uma alternativa viável para aplicações onde a biodegradabilidade e baixa toxicidade são determinantes. Com formulação adequada, oferece performance competitiva e reduz externalidades ambientais associadas ao óleo fóssil.</p>
+
+        <p class="text-muted">Projetos pilotos demonstram que, com suporte técnico e ajustes, é possível substituir lubrificantes convencionais em uma gama significativa de aplicações industriais e manter a confiabilidade operacional.</p>
+      </div>
+    </section>
+
+    <!-- CONCLUSÃO -->
+    <section id="conclusao" class="fade-up">
+      <div class="card">
+        <h3>Conclusão</h3>
+        <p class="text-muted">A transição para lubrificantes de base biológica é estratégica: reduz riscos ambientais, promove economia local e, em muitos cenários, é economicamente justificável quando considerado o ciclo de vida. Recomendamos testes piloto em equipamentos críticos e parcerias com fornecedores locais para escala.</p>
+
+        <p class="text-muted">Se quiser, podemos ajustar a formulação para aplicações específicas (alta temperatura, atmosferas agressivas) e preparar um relatório LCA detalhado para sua realidade.</p>
+      </div>
+    </section>
+
+    <!-- SUSTENTABILIDADE + GRÁFICO -->
+    <section id="sustentabilidade" class="fade-up">
+      <div class="card">
+        <h3>Sustentabilidade — comparação com óleos de combustão</h3>
+        <p class="text-muted">Óleos derivados de petróleo trazem vantagens de custo e durabilidade, mas têm impactos relevantes: alta persistência, toxicidade e pegada de carbono. Abaixo, comparação por indicadores chave.</p>
+
+        <div class="chart-wrap" style="margin-top:16px">
+          <!-- Gráfico -->
+          <div class="chart" aria-hidden="true">
+            <strong>Comparativo: Óleo Comum (fóssil) vs Óleo de amendoim</strong>
+            <div class="legend" style="margin-top:8px">
+              <div class="item"><span class="swatch" style="background:linear-gradient(90deg,#f07b4a,#ffb36b)"></span> Óleo Comum</div>
+              <div class="item"><span class="swatch" style="background:linear-gradient(90deg,var(--accent-2),var(--accent))"></span> Óleo de amendoim</div>
+            </div>
+
+            <div class="bars" id="bars">
+              <!-- JS inject -->
+            </div>
+
+            <div class="note">Nota: escore 0–100 (maior = melhor). Valores ilustrativos baseados em LCA simplificado e testes; consulte ficha técnica para dados precisos.</div>
+          </div>
+
+          <!-- Explicação lateral -->
+          <aside class="card" style="padding:18px">
+            <strong>Interpretação dos indicadores</strong>
+            <p class="text-muted" style="margin-top:8px"><strong>Biodegradabilidade:</strong> rapidez de degradação por microrganismos.</p>
+            <p class="text-muted"><strong>Impacto ambiental:</strong> efeitos combinados sobre solo, água e emissões.</p>
+            <p class="text-muted"><strong>Eficiência & Durabilidade:</strong> desempenho mecânico em operação.</p>
+            <p class="text-muted"><strong>Toxicidade:</strong> risco para organismos e operadores.</p>
+            <p class="text-muted"><strong>Custo de produção:</strong> indicador relativo (maior = mais competitivo).</p>
+
+            <div style="margin-top:12px" class="detail">
+              <strong>Resumo prático</strong>
+              <p class="text-muted" style="margin-top:8px">Óleo de amendoim pontua melhor em biodegradabilidade, impacto e toxicidade; o fóssil leva em custo e durabilidade, mas o balanço total favorece a solução vegetal em contextos sensíveis.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+<footer>
+  © 2025 Óleos Biodegradáveis. Todos os direitos reservados. 
+  Baseado em dados científicos e ambientais de fontes confiáveis. | 
+  Desenvolvido por André Sena.
+</footer>
+
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if(menuBtn){
+      menuBtn.addEventListener('click', ()=> {
+        if(mobileNav.style.display === 'block') mobileNav.style.display = 'none';
+        else mobileNav.style.display = 'block';
+      });
+    }
+
+    // Smooth anchors
+    document.querySelectorAll('a.smooth').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+        if(mobileNav) mobileNav.style.display = 'none';
+      });
+    });
+
+    // Fade-up reveal
+    const reveal = ()=>{
+      document.querySelectorAll('.fade-up').forEach(el=>{
+        const r = el.getBoundingClientRect();
+        if(r.top < (window.innerHeight - 60)) el.classList.add('show');
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', ()=>{ reveal(); document.getElementById('ano').textContent = new Date().getFullYear(); initChart(); });
+
+    // Chart data (scores 0-100)
+    const indicators = [
+      {key:'Biodegradabilidade', bio:92, common:12},
+      {key:'Impacto ambiental', bio:88, common:28},
+      {key:'Eficiência', bio:78, common:82},
+      {key:'Durabilidade', bio:72, common:88},
+      {key:'Toxicidade (segurança)', bio:90, common:30},
+      {key:'Custo de produção', bio:65, common:85}
+    ];
+
+    function initChart(){
+      const container = document.getElementById('bars');
+      container.innerHTML = '';
+
+      indicators.forEach(ind => {
+        // óleo comum row
+        const rowCommon = document.createElement('div');
+        rowCommon.className = 'bar-row';
+        rowCommon.innerHTML = `
+          <div class="bar-label">${ind.key}</div>
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-fill fill-common" style="width:0%" data-score="${ind.common}">${ind.common}</div>
+          </div>
+          <div class="score" aria-label="${ind.key} óleo comum">${ind.common}</div>
+        `;
+        // óleo bio row (stacked below)
+        const rowBio = document.createElement('div');
+        rowBio.className = 'bar-row';
+        rowBio.style.marginTop = '-6px';
+        rowBio.innerHTML = `
+          <div class="bar-label" style="opacity:0.6;font-weight:600"></div>
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-fill fill-bio" style="width:0%" data-score="${ind.bio}">${ind.bio}</div>
+          </div>
+          <div class="score" aria-label="${ind.key} óleo biodegradável">${ind.bio}</div>
+        `;
+
+        container.appendChild(rowCommon);
+        container.appendChild(rowBio);
+      });
+
+      // animate fills
+      setTimeout(()=> {
+        document.querySelectorAll('.bar-fill').forEach(el=>{
+          const score = el.getAttribute('data-score');
+          el.style.width = score + '%';
+          setTimeout(()=> {
+            if(parseInt(score) < 18) el.textContent = '';
+            else el.textContent = score + '%';
+          }, 400);
+        });
+      }, 250);
+    }
+
+    // Accessibility: keyboard focus outlines
+    document.body.addEventListener('keydown', (e)=>{
+      if(e.key === 'Tab') document.body.classList.add('show-focus');
+    });
+  </script>
+</body>
+</html>
